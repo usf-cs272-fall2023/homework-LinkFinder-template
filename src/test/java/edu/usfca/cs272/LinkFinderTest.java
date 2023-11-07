@@ -18,6 +18,7 @@ import org.junit.jupiter.api.MethodOrderer.MethodName;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestClassOrder;
 import org.junit.jupiter.api.TestInstance;
@@ -58,6 +59,7 @@ public class LinkFinderTest {
 		 * Tests links on locally-created HTML text (not actual webpages).
 		 */
 		@Nested
+		@Tag("A")
 		@TestMethodOrder(OrderAnnotation.class)
 		public class A_LocalValidTests {
 			/**
@@ -294,6 +296,7 @@ public class LinkFinderTest {
 		 * Tests links on locally-created HTML text (not actual webpages).
 		 */
 		@Nested
+		@Tag("B")
 		@TestMethodOrder(OrderAnnotation.class)
 		public class B_LocalInvalidTests {
 			/**
@@ -413,6 +416,7 @@ public class LinkFinderTest {
 		 * Tests links on locally-created HTML text (not actual webpages).
 		 */
 		@Nested
+		@Tag("C")
 		@TestMethodOrder(OrderAnnotation.class)
 		public class C_LocalMultipleTests {
 			/**
@@ -461,6 +465,7 @@ public class LinkFinderTest {
 		 * Tests links on actual webpages.
 		 */
 		@Nested
+		@Tag("D")
 		@TestMethodOrder(OrderAnnotation.class)
 		public class D_RemoteSimpleTests {
 			/**
@@ -520,6 +525,7 @@ public class LinkFinderTest {
 		 * Tests links on actual webpages.
 		 */
 		@Nested
+		@Tag("E")
 		@TestMethodOrder(OrderAnnotation.class)
 		public class E_RemoteGutenTests {
 			/**
@@ -567,6 +573,7 @@ public class LinkFinderTest {
 		 * Tests links on actual webpages.
 		 */
 		@Nested
+		@Tag("F")
 		@TestMethodOrder(OrderAnnotation.class)
 		public class F_RemoteRecurseTests {
 			/**
